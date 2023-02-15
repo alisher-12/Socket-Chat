@@ -1,0 +1,17 @@
+<div>
+    <button (click)="connect()">Connect</button>
+    <button (click)="disconnect()">Disconnect</button>
+    <hr>
+    
+    <label>Message: </label>
+    <input type="text" [(ngModel)]="textToSend">
+    <button (click)="send()">Send</button>
+    <hr>
+
+    <div class="container">
+        <div *ngFor="let m of allMessages">
+            🕑 {{m.time}} ➡ {{m.text}}
+        </div>
+    </div>
+    
+</div>
